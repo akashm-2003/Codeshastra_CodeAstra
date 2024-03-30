@@ -7,6 +7,7 @@ const orderSchema = new Schema({
   quantity: Number,
   price: Number,
   productname: String,
+  totalSales: Number,
   status: {
     type: String,
     enum: ["pending", "dispatched", "out for delivery", "delivered"],
@@ -19,7 +20,7 @@ const orderSchema = new Schema({
   type: {
     type: String,
     enum: ["buy", "sell"],
-  }
+  },
 });
 
 const farmerSchema = new Schema(
@@ -27,6 +28,7 @@ const farmerSchema = new Schema(
     name: String,
     phone: String,
     state: String,
+    city: String,
     income: Number,
     landsize: Number,
     debtrecords: {
